@@ -4,12 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "mongoose": "^5.9.15",
+    "nodemon": "^2.0.4",
     "underscore": "^1.10.2"
+  },
+  "devDependencies": {
+    "jshint": "^2.11.1"
   }
 }
