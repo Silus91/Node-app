@@ -1,5 +1,5 @@
 Arguments: 
-  /home/dawid/.nvm/versions/node/v10.16.3/bin/node /usr/share/yarn/bin/yarn.js add joi
+  /home/dawid/.nvm/versions/node/v10.16.3/bin/node /usr/share/yarn/bin/yarn.js add jest --save-dev
 
 PATH: 
   /home/dawid/.nvm/versions/node/v10.16.3/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: EACCES: permission denied, unlink '/home/dawid/trening/node/Node-app/node_modules/@sindresorhus/is/license'
+  Error: EACCES: permission denied, mkdir '/home/dawid/trening/node/Node-app/node_modules/@types/babel__core'
 
 npm manifest: 
   {
