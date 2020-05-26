@@ -1,28 +1,16 @@
-console.log("before");
-getUser(1, (user) => {
-  console.log("user", user);
+const winston = require("winston");
+const express = require("express");
+const app = express();
 
-  getRepositories(user.huj, (repos) => {
-    console.log(`repo ${repos}`);
-  });
-});
+require("./startup/logging")();
+require("./startup/routes")(app);
+require("./startup/db")();
+require("./startup/config")();
+require("./startup/validation")();
 
-console.log("after");
+const port = process.env.PORT || 3000;
+const server = app.listen(port, () =>
+  winston.info(`Listening on port ${port}...`)
+);
 
-function getUser(id) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      console.log("getUser");
-      resolve({ id: id, huj: "user" });
-    }, 2000);
-  });
-}
-
-function getRepositories(username) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      console.log("getRepo...");
-      resolve([`${username}`, "remo3", "i huj wie co jeszcze"]);
-    }, 2000);
-  });
-}
+module.exports = server;
