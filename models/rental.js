@@ -25,18 +25,6 @@ const Rental = mongoose.model(
       }),
       required: true,
     },
-    movie: {
-      type: new mongoose.Schema({
-        title: {
-          type: String,
-          required: true,
-          trim: true,
-          minlength: 5,
-          maxlength: 255,
-        },
-      }),
-      required: true,
-    },
     dateOut: {
       type: Date,
       required: true,
